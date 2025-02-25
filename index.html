@@ -31,9 +31,24 @@
         nav ul li a:hover { color: var(--accent); }
         .menu-toggle { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
 
-        /* Hero Section with Parallax */
-        .hero { height: 100vh; background: url('https://images.unsplash.com/photo-1508514177221-188b0df7a4d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center/cover; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); }
+        /* Hero Section with Dynamic Background */
+        .hero { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: white; overflow: hidden; }
+        .hero-background {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+            background-size: 400% 400%;
+            animation: gradientTwirl 15s ease infinite;
+            z-index: -1;
+        }
+        @keyframes gradientTwirl {
+            0% { background-position: 0% 0%; }
+            25% { background-position: 100% 0%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: -1; }
         .hero-content { position: relative; padding: 2rem; }
         .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
         .hero p { font-size: 1.5rem; max-width: 600px; margin: 0 auto 2rem; }
@@ -102,6 +117,7 @@
     </header>
 
     <section id="home" class="hero">
+        <div class="hero-background"></div>
         <div class="hero-content">
             <h1>A Vision for Energy’s Future</h1>
             <p>I’m Khaled Diab, a leader who’s turned challenges into solutions—saving millions, cutting emissions, and inspiring thousands.</p>
@@ -113,15 +129,15 @@
         <h2>My Journey</h2>
         <div class="story-card" style="transform: translateY(30px);">
             <h3>From Engineer to Innovator</h3>
-            <p>It began in 2011 as a Senior Electrical Engineer at Petrosilah. I saw inefficiencies and dreamed bigger—proposing a study that saved $420,000 annually. That spark ignited a 14-year journey of impact.</p>
+            <p>It began in 2011 as a Senior Electrical Engineer at Petrosilah. I saw inefficiencies and envisioned change—proposing a study that saved $420,000 annually. That moment sparked a 14-year mission.</p>
         </div>
         <div class="story-card" style="transform: translateY(30px);">
             <h3>Leading with Purpose</h3>
-            <p>By 2018, as Head of Energy Efficiency at EGPC, I secured a $200M EU-EBRD loan, transforming Suez Oil Processing Company—saving 295,000 tons of CO2 yearly. It wasn’t just numbers; it was a legacy for sustainability.</p>
+            <p>By 2018, as Head of Energy Efficiency at EGPC, I secured a $200M EU-EBRD loan, transforming Suez Oil Processing—saving 295,000 tons of CO2 yearly. It was about building a sustainable legacy.</p>
         </div>
         <div class="story-card" style="transform: translateY(30px);">
             <h3>Empowering Others</h3>
-            <p>Today, I train and consult, sharing my expertise with over 1,000 professionals at Elm Company and Solartech UK. From Cairo to Jeddah, I’m building a future where energy thrives responsibly.</p>
+            <p>Now, I train and consult, impacting over 1,000 professionals at Elm Company and Solartech UK. From Cairo to Jeddah, I’m shaping a future where energy thrives responsibly.</p>
         </div>
     </section>
 
@@ -151,11 +167,11 @@
         <h2>Real Impact, Real Stories</h2>
         <div class="story-card">
             <h3>$15.1M Saved</h3>
-            <p>At Petrosilah, IoT-driven optimization turned ideas into millions in savings—a testament to innovation.</p>
+            <p>At Petrosilah, IoT-driven optimization turned vision into millions—a proof of what’s possible.</p>
         </div>
         <div class="story-card">
             <h3>Zero Flaring Vision</h3>
-            <p>I proposed a plan adopted by Pharos Energy to end routine gas flaring by 2030—protecting our planet.</p>
+            <p>I proposed a plan adopted by Pharos Energy to end routine gas flaring by 2030—safeguarding our world.</p>
         </div>
     </section>
 
