@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Khaled Diab, PhD, CEM® - Your Partner in Energy Training and Technical Consulting">
-    <meta name="keywords" content="energy trainer Jeddah, technical consultant Saudi Arabia, sustainability expert">
+    <meta name="keywords" content="energy trainer MENA, technical consultant Saudi Arabia, sustainability expert">
     <title>Khaled Diab - Your Energy Ally</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap" rel="stylesheet">
@@ -61,7 +61,9 @@
             background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
             padding: 3rem;
-            max-width: 700px;
+            width: 80vw; /* Adjustable width */
+            max-width: 800px; /* Upper limit */
+            min-height: 50vh; /* Increased base height */
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transform: scale(0.95);
@@ -72,9 +74,11 @@
             opacity: 1;
         }
         h1, h2 { font-family: 'Playfair Display', serif; color: #1E3A8A; }
-        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
         h2 { font-size: 2rem; margin-bottom: 1.5rem; }
-        p { font-size: 1.2rem; color: #333; }
+        ul { list-style: none; text-align: left; padding-left: 1rem; }
+        li { font-size: 1.2rem; color: #333; margin: 0.5rem 0; position: relative; padding-left: 1.5rem; }
+        li:before { content: "•"; color: #16A34A; position: absolute; left: 0; font-size: 1.5rem; }
         .cta-btn {
             background: #16A34A;
             color: #fff;
@@ -103,16 +107,20 @@
             nav ul { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: rgba(30, 58, 138, 0.9); padding: 1rem 0; }
             nav ul.active { display: flex; }
             .menu-toggle { display: block; }
+            .card-content { width: 90vw; padding: 2rem; min-height: 60vh; }
             h1 { font-size: 2rem; }
             h2 { font-size: 1.8rem; }
-            p { font-size: 1rem; }
-            .card-content { padding: 2rem; max-width: 90%; }
+            li { font-size: 1rem; }
         }
         @media (max-width: 480px) {
-            h1 { font-size: 1.5rem; }
+            .card-content { width: 95vw; min-height: 70vh; }
+            h1 { font-size: 1.6rem; }
             h2 { font-size: 1.4rem; }
-            p { font-size: 0.9rem; }
+            li { font-size: 0.9rem; }
             .cta-btn { padding: 0.8rem 1.5rem; }
+        }
+        @media (orientation: landscape) and (max-height: 500px) {
+            .card-content { min-height: 80vh; padding: 1.5rem; }
         }
     </style>
 </head>
@@ -137,51 +145,74 @@
     <section id="welcome" class="section-card">
         <div class="card-content">
             <h1>Welcome, I’m Khaled Diab</h1>
-            <p>With 14 years of expertise, I guide teams and organizations toward energy excellence—practical solutions, proven results, and a passion for progress.</p>
-            <a href="#journey" class="cta-btn">Discover My Story</a>
+            <ul>
+                <li>14+ years shaping energy solutions</li>
+                <li>Trainer and consultant for practical success</li>
+                <li>Committed to your progress</li>
+            </ul>
+            <a href="#journey" class="cta-btn">My Story</a>
         </div>
     </section>
 
     <section id="journey" class="section-card">
         <div class="card-content">
             <h2>A Journey of Solutions</h2>
-            <p>It started in 2011 at Petrosilah, where I turned inefficiencies into $420,000 in savings. That spark grew into a career of innovation—leading digital transformations at EGPC and training over 1,000 professionals from Cairo to Jeddah. I’m here to share that journey with you.</p>
-            <a href="#services" class="cta-btn">Explore My Services</a>
+            <ul>
+                <li>Started at Petrosilah, saved $420K annually</li>
+                <li>Led innovations across MENA region</li>
+                <li>Trained 1,000+ professionals with care</li>
+            </ul>
+            <a href="#services" class="cta-btn">What I Offer</a>
         </div>
     </section>
 
     <section id="services" class="section-card">
         <div class="card-content">
             <h2>Services I Deliver</h2>
-            <p>Whether it’s energy efficiency training, digital transformation consulting, or asset management workshops, I bring hands-on expertise to your team—empowering success with tools that work.</p>
-            <a href="#impact" class="cta-btn">See the Impact</a>
+            <ul>
+                <li>Energy efficiency training</li>
+                <li>Digital transformation consulting</li>
+                <li>Asset management workshops</li>
+            </ul>
+            <a href="#impact" class="cta-btn">My Impact</a>
         </div>
     </section>
 
     <section id="impact" class="section-card">
         <div class="card-content">
             <h2>Impact You Can Trust</h2>
-            <p>I’ve saved $15.1M with IoT solutions, reduced 295,000 tons of CO2 at EGPC, and shaped sustainable futures—like zero flaring by 2030. Let’s create your success story together.</p>
-            <a href="#credentials" class="cta-btn">View My Credentials</a>
+            <ul>
+                <li>Saved $15.1M with IoT solutions</li>
+                <li>Cut 295,000 tons of CO2 in MENA</li>
+                <li>Zero flaring vision by 2030</li>
+            </ul>
+            <a href="#credentials" class="cta-btn">My Credentials</a>
         </div>
     </section>
 
     <section id="credentials" class="section-card">
         <div class="card-content">
             <h2>Credentials That Matter</h2>
-            <p>My Ph.D. in Electrical Power Engineering, CEM® certification, and publications in nuclear optimization aren’t just titles—they’re tools I use to deliver real value to you.</p>
-            <a href="#contact" class="cta-btn">Connect With Me</a>
+            <ul>
+                <li>Ph.D. in Electrical Power Engineering</li>
+                <li>Certified Energy Manager (CEM®)</li>
+                <li>Published in top journals</li>
+            </ul>
+            <a href="#contact" class="cta-btn">Let’s Talk</a>
         </div>
     </section>
 
     <section id="contact" class="section-card">
         <div class="card-content">
             <h2>Let’s Collaborate</h2>
-            <p>I’m ready to support your goals with tailored training and consulting. Reach out to start the conversation.</p>
+            <ul>
+                <li>Tailored solutions for you</li>
+                <li>Reach out anytime</li>
+            </ul>
             <form action="https://formspree.io/f/your-form-id" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="4" placeholder="How can I assist you?" required></textarea>
+                <textarea name="message" rows="4" placeholder="How can I assist?" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </div>
