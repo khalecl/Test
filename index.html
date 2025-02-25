@@ -3,43 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Khaled Diab, PhD, CEM® - Transforming Energy Through Expertise and Innovation">
-    <meta name="keywords" content="energy trainer Jeddah, sustainability consultant Saudi Arabia, digital transformation expert">
-    <title>Khaled Diab - Energy Visionary</title>
+    <meta name="description" content="Khaled Diab, PhD, CEM® - Your Partner in Energy Training and Technical Consulting">
+    <meta name="keywords" content="energy trainer Jeddah, technical consultant Saudi Arabia, sustainability expert">
+    <title>Khaled Diab - Your Energy Ally</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Georgia', serif; line-height: 1.8; color: #333; background: #fff; overflow-x: hidden; scroll-behavior: smooth; }
-
-        /* Colors */
-        :root {
-            --primary: #1E3A8A; /* Deep Blue */
-            --secondary: #16A34A; /* Vibrant Green */
-            --accent: #F59E0B; /* Warm Amber */
-            --light: #F9FAFB;
-            --dark: #1F2937;
-        }
-
-        /* Header */
-        header { position: fixed; top: 0; width: 100%; background: var(--primary); padding: 1rem 2rem; z-index: 1000; transition: background 0.3s; }
-        header.scrolled { background: rgba(30, 58, 138, 0.9); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { color: white; font-size: 1.5rem; font-weight: bold; }
-        nav ul { list-style: none; display: flex; }
-        nav ul li { margin-left: 2rem; }
-        nav ul li a { color: white; text-decoration: none; font-size: 1.1rem; transition: color 0.3s; }
-        nav ul li a:hover { color: var(--accent); }
-        .menu-toggle { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
-
-        /* Hero Section with Dynamic Background */
-        .hero { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: white; overflow: hidden; }
-        .hero-background {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+        body {
+            font-family: 'Lora', serif;
+            color: #fff;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            background: linear-gradient(45deg, #1E3A8A, #16A34A, #F59E0B, #1E3A8A);
             background-size: 400% 400%;
-            animation: gradientTwirl 15s ease infinite;
-            z-index: -1;
+            animation: gradientTwirl 20s ease infinite;
+            min-height: 100vh;
         }
         @keyframes gradientTwirl {
             0% { background-position: 0% 0%; }
@@ -48,52 +27,91 @@
             75% { background-position: 0% 100%; }
             100% { background-position: 0% 0%; }
         }
-        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: -1; }
-        .hero-content { position: relative; padding: 2rem; }
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.5rem; max-width: 600px; margin: 0 auto 2rem; }
-        .cta-btn { background: var(--secondary); color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; transition: transform 0.3s, background 0.3s; }
-        .cta-btn:hover { transform: scale(1.05); background: #15803d; }
 
-        /* Storytelling Sections */
-        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
-        h2 { color: var(--primary); font-size: 2.5rem; text-align: center; margin-bottom: 2rem; }
-        .story-card { background: var(--light); padding: 2rem; border-radius: 15px; margin: 1rem 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1); opacity: 0; transition: opacity 0.8s, transform 0.8s; }
-        .story-card.visible { opacity: 1; transform: translateY(0); }
-        .story-card h3 { color: var(--secondary); font-size: 1.8rem; margin-bottom: 1rem; }
-        .story-card p { font-size: 1.1rem; }
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(30, 58, 138, 0.8);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+        header.scrolled { background: rgba(30, 58, 138, 0.95); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #F59E0B; }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 1.5rem; }
+        nav ul li a { color: #fff; text-decoration: none; font-size: 1.1rem; transition: color 0.3s; }
+        nav ul li a:hover { color: #F59E0B; }
+        .menu-toggle { display: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
 
-        /* Parallax Section */
-        .parallax { background: url('https://images.unsplash.com/photo-1501700493788-fa565f7e1791?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center/cover fixed; height: 50vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative; }
-        .parallax::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); }
-        .parallax-content { position: relative; font-size: 1.5rem; }
+        /* Card Sections */
+        .section-card {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+            padding: 2rem;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .card-content {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 700px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: scale(0.95);
+            opacity: 0;
+        }
+        .card-content.visible {
+            transform: scale(1);
+            opacity: 1;
+        }
+        h1, h2 { font-family: 'Playfair Display', serif; color: #1E3A8A; }
+        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+        p { font-size: 1.2rem; color: #333; }
+        .cta-btn {
+            background: #16A34A;
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1.5rem;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .cta-btn:hover { background: #15803d; transform: scale(1.05); }
 
-        /* Contact */
-        #contact form { max-width: 700px; margin: 2rem auto; display: grid; gap: 1.5rem; }
-        #contact input, #contact textarea { padding: 1rem; border: none; border-bottom: 2px solid var(--dark); background: var(--light); border-radius: 5px 5px 0 0; font-size: 1rem; }
-        #contact button { background: var(--primary); color: white; padding: 1rem; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
-        #contact button:hover { background: #1e3a8a; }
+        /* Form */
+        form { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+        input, textarea { padding: 1rem; border: none; border-radius: 10px; font-size: 1rem; background: #fff; box-shadow: inset 0 2px 5px rgba(0,0,0,0.1); }
+        button { background: #1E3A8A; color: #fff; padding: 1rem; border: none; border-radius: 10px; cursor: pointer; transition: background 0.3s; }
+        button:hover { background: #1e3a8a; }
 
         /* Footer */
-        footer { background: var(--dark); color: white; padding: 2rem; text-align: center; }
-        footer a { color: var(--accent); text-decoration: none; }
+        footer { height: 100vh; display: flex; align-items: center; justify-content: center; scroll-snap-align: start; }
+        .footer-content { color: #fff; text-align: center; }
 
-        /* Mobile Responsiveness */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            nav ul { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: var(--primary); padding: 1rem 0; }
+            nav ul { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; width: 100%; background: rgba(30, 58, 138, 0.9); padding: 1rem 0; }
             nav ul.active { display: flex; }
             .menu-toggle { display: block; }
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1.2rem; }
-            .story-card { padding: 1.5rem; }
-            .parallax { height: 40vh; }
-            #contact form { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 { font-size: 1.5rem; }
-            .hero p { font-size: 1rem; }
+            h1 { font-size: 2rem; }
             h2 { font-size: 1.8rem; }
+            p { font-size: 1rem; }
+            .card-content { padding: 2rem; max-width: 90%; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.4rem; }
+            p { font-size: 0.9rem; }
             .cta-btn { padding: 0.8rem 1.5rem; }
         }
     </style>
@@ -105,8 +123,8 @@
             <div class="menu-toggle"><i class="fas fa-bars"></i></div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#journey">My Journey</a></li>
+                    <li><a href="#welcome">Welcome</a></li>
+                    <li><a href="#journey">Journey</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#impact">Impact</a></li>
                     <li><a href="#credentials">Credentials</a></li>
@@ -116,96 +134,64 @@
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <h1>A Vision for Energy’s Future</h1>
-            <p>I’m Khaled Diab, a leader who’s turned challenges into solutions—saving millions, cutting emissions, and inspiring thousands.</p>
-            <a href="#contact" class="cta-btn">Let’s Shape Tomorrow</a>
+    <section id="welcome" class="section-card">
+        <div class="card-content">
+            <h1>Welcome, I’m Khaled Diab</h1>
+            <p>With 14 years of expertise, I guide teams and organizations toward energy excellence—practical solutions, proven results, and a passion for progress.</p>
+            <a href="#journey" class="cta-btn">Discover My Story</a>
         </div>
     </section>
 
-    <section id="journey">
-        <h2>My Journey</h2>
-        <div class="story-card" style="transform: translateY(30px);">
-            <h3>From Engineer to Innovator</h3>
-            <p>It began in 2011 as a Senior Electrical Engineer at Petrosilah. I saw inefficiencies and envisioned change—proposing a study that saved $420,000 annually. That moment sparked a 14-year mission.</p>
-        </div>
-        <div class="story-card" style="transform: translateY(30px);">
-            <h3>Leading with Purpose</h3>
-            <p>By 2018, as Head of Energy Efficiency at EGPC, I secured a $200M EU-EBRD loan, transforming Suez Oil Processing—saving 295,000 tons of CO2 yearly. It was about building a sustainable legacy.</p>
-        </div>
-        <div class="story-card" style="transform: translateY(30px);">
-            <h3>Empowering Others</h3>
-            <p>Now, I train and consult, impacting over 1,000 professionals at Elm Company and Solartech UK. From Cairo to Jeddah, I’m shaping a future where energy thrives responsibly.</p>
+    <section id="journey" class="section-card">
+        <div class="card-content">
+            <h2>A Journey of Solutions</h2>
+            <p>It started in 2011 at Petrosilah, where I turned inefficiencies into $420,000 in savings. That spark grew into a career of innovation—leading digital transformations at EGPC and training over 1,000 professionals from Cairo to Jeddah. I’m here to share that journey with you.</p>
+            <a href="#services" class="cta-btn">Explore My Services</a>
         </div>
     </section>
 
-    <section id="services" class="parallax">
-        <div class="parallax-content">
-            <h2>Services That Inspire Change</h2>
-            <p>Training and consulting rooted in real-world success.</p>
+    <section id="services" class="section-card">
+        <div class="card-content">
+            <h2>Services I Deliver</h2>
+            <p>Whether it’s energy efficiency training, digital transformation consulting, or asset management workshops, I bring hands-on expertise to your team—empowering success with tools that work.</p>
+            <a href="#impact" class="cta-btn">See the Impact</a>
         </div>
     </section>
 
-    <section id="services-content">
-        <div class="story-card">
-            <h3>Energy Efficiency Training</h3>
-            <p>I teach teams to master energy audits and reduce emissions—skills that cut CO2 by 15% in pilot projects.</p>
-        </div>
-        <div class="story-card">
-            <h3>Digital Transformation Consulting</h3>
-            <p>From IoT to SAP, I’ve delivered 95% system availability in Dammam, guiding companies into the digital age.</p>
-        </div>
-        <div class="story-card">
-            <h3>Asset Management Workshops</h3>
-            <p>My strategies slashed downtime by 30% at EGPC—practical lessons for lasting efficiency.</p>
+    <section id="impact" class="section-card">
+        <div class="card-content">
+            <h2>Impact You Can Trust</h2>
+            <p>I’ve saved $15.1M with IoT solutions, reduced 295,000 tons of CO2 at EGPC, and shaped sustainable futures—like zero flaring by 2030. Let’s create your success story together.</p>
+            <a href="#credentials" class="cta-btn">View My Credentials</a>
         </div>
     </section>
 
-    <section id="impact">
-        <h2>Real Impact, Real Stories</h2>
-        <div class="story-card">
-            <h3>$15.1M Saved</h3>
-            <p>At Petrosilah, IoT-driven optimization turned vision into millions—a proof of what’s possible.</p>
-        </div>
-        <div class="story-card">
-            <h3>Zero Flaring Vision</h3>
-            <p>I proposed a plan adopted by Pharos Energy to end routine gas flaring by 2030—safeguarding our world.</p>
+    <section id="credentials" class="section-card">
+        <div class="card-content">
+            <h2>Credentials That Matter</h2>
+            <p>My Ph.D. in Electrical Power Engineering, CEM® certification, and publications in nuclear optimization aren’t just titles—they’re tools I use to deliver real value to you.</p>
+            <a href="#contact" class="cta-btn">Connect With Me</a>
         </div>
     </section>
 
-    <section id="credentials" class="parallax">
-        <div class="parallax-content">
-            <h2>Credentials That Define Me</h2>
-            <p>Expertise backed by education and recognition.</p>
+    <section id="contact" class="section-card">
+        <div class="card-content">
+            <h2>Let’s Collaborate</h2>
+            <p>I’m ready to support your goals with tailored training and consulting. Reach out to start the conversation.</p>
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="How can I assist you?" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
-    </section>
-
-    <section id="credentials-content">
-        <div class="story-card">
-            <h3>Education & Certifications</h3>
-            <p>Ph.D. in Electrical Power Engineering (Cairo University, 2021)<br>Certified Energy Manager (CEM®, 2020)<br>NEBOSH IGC (2024)</p>
-        </div>
-        <div class="story-card">
-            <h3>Publications</h3>
-            <p>“Load following approach for a VVER Nuclear Power Plant” (2022)<br>“Modeling Nuclear Reactor Performance” (2020)</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Let’s Write the Next Chapter</h2>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="How can I help you?" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <p style="text-align: center; margin-top: 2rem;">+20-115-554-4225 | khaleddiab@mail.com | <a href="https://www.linkedin.com/in/dr-khaled-diab/" target="_blank">LinkedIn</a></p>
     </section>
 
     <footer>
-        <p>© 2025 Khaled Diab - Crafting a Sustainable Future</p>
+        <div class="footer-content">
+            <p>+20-115-554-4225 | khaleddiab@mail.com | <a href="https://www.linkedin.com/in/dr-khaled-diab/" target="_blank">LinkedIn</a></p>
+            <p>© 2025 Khaled Diab - Your Partner in Energy Progress</p>
+        </div>
     </footer>
 
     <script>
@@ -215,17 +201,16 @@
             header.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Fade-In Animation
-        const storyCards = document.querySelectorAll('.story-card');
+        // Card Visibility
+        const cards = document.querySelectorAll('.card-content');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.2 });
-        storyCards.forEach(card => observer.observe(card));
+        }, { threshold: 0.5 });
+        cards.forEach(card => observer.observe(card));
 
         // Mobile Menu Toggle
         const menuToggle = document.querySelector('.menu-toggle');
